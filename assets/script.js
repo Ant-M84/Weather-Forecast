@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(document).on("click","#historyBtn", function () {
         var newInput= (this).innerHTML;
         var cityName = newInput;
-        var requestUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=d0fcce6012b326b116df7b9a8ea31123";
+        var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=d0fcce6012b326b116df7b9a8ea31123";
 
         fetch(requestUrl)
             .then (function (response) {
@@ -48,7 +48,7 @@ $(document).ready(function () {
                         <h6>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)} °CC</h6>
                         <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                         <h6>Humidity: ${weatherItem.main.humidity} %</h6>
-                        <img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather Icon"></img>
+                        <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather Icon"></img>
                     </ul>`;
         };
     }
