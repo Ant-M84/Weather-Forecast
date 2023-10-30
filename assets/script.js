@@ -37,7 +37,7 @@ $(document).ready(function () {
     var createWeatherCard = (cityName, weatherItem, index) => {
         if (index === 0) {
             return `<ul class="city-card">
-                        <h2> ${cityName} (${weatherItem.dt_txt.split(" ")[0]})<img src="http://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather Icon"></img></h2>
+                        <h2> ${cityName} (${weatherItem.dt_txt.split(" ")[0]})<img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather Icon"></img></h2>
                         <h3>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)} °C</h3>
                         <h3>Wind: ${weatherItem.wind.speed} M/S</h3>
                         <h3>Humidity: ${weatherItem.main.humidity} %</h3>
