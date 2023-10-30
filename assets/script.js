@@ -55,7 +55,7 @@ $(document).ready(function () {
 
     // Code to obtain city details then create a new array using details for a single date //
     var getWeather = (cityName, lat, lon) => {
-        var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=d0fcce6012b326b116df7b9a8ea31123";
+        var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=d0fcce6012b326b116df7b9a8ea31123";
 
         fetch(weatherUrl)
             .then (function (response) {
@@ -83,7 +83,7 @@ $(document).ready(function () {
     // Code to obtain city name, latitude and longitude from GeoCode API to use in OpenWeatherMap API//
     function getCity () {
         var cityName = $("#input").val();
-        var requestUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=d0fcce6012b326b116df7b9a8ea31123";
+        var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=d0fcce6012b326b116df7b9a8ea31123";
 
         fetch(requestUrl)
             .then (function (response) {
