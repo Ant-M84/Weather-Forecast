@@ -73,8 +73,9 @@ input {
 
 .forecast {
     justify-content: center;
+    align-content: center;
     border: 0px solid white;
-    height: 250px;
+    height: 300px;
     padding: 5px;
 }
 
